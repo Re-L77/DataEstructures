@@ -30,10 +30,35 @@ public class Lista {
         tamanio++;
     }
 
-    public void clonar(Nodo nodo) {
+    public void clonar(int veces) {
         if (tamanio == 0) {
-        } else {
+            System.out.println("Lista vacía");
+            return;
+        }
 
+        Nodo actual = primero;
+
+        while (actual != null) {
+            int clones = 0;
+            // Guarda el siguiente nodo original antes de modificar los punteros
+            Nodo siguiente = actual.sig;
+
+            // Clona el nodo 'veces' veces
+            while (clones < veces) {
+                Nodo clon = new Nodo(actual.dato);
+                // Inserta el clon justo después del nodo actual
+                clon.sig = actual.sig;
+                actual.sig = clon;
+
+                // Avanza actual al clon recién insertado (para encadenar los siguientes)
+                actual = clon;
+
+                tamanio++;
+                clones++;
+            }
+
+            // Al terminar los clones, pasa al siguiente nodo original
+            actual = siguiente;
         }
     }
 

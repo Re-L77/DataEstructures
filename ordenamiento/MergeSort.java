@@ -15,10 +15,10 @@ public class MergeSort {
 
         int i = 0, j = 0, k = left;
 
-        System.out.print("Combinando: ");
-        for (int x = left; x <= right; x++)
-            System.out.print(arr[x] + " ");
-        System.out.println();
+        // System.out.print("Combinando: ");
+        // for (int x = left; x <= right; x++)
+        // System.out.print(arr[x] + " ");
+        // System.out.println();
 
         while (i < n1 && j < n2) {
             if (L[i] <= R[j]) {
@@ -43,10 +43,10 @@ public class MergeSort {
             k++;
         }
 
-        System.out.print("Resultado:   ");
-        for (int x = left; x <= right; x++)
-            System.out.print(arr[x] + " ");
-        System.out.println("\n");
+        // System.out.print("Resultado: ");
+        // for (int x = left; x <= right; x++)
+        // System.out.print(arr[x] + " ");
+        // System.out.println("\n");
     }
 
     // Función recursiva de Merge Sort
@@ -59,18 +59,18 @@ public class MergeSort {
         }
     }
 
-    public static void main(String[] args) {
-        int[] arr = { 38, 27, 43, 3, 9, 82, 10 };
+    // public static void main(String[] args) {
+    // int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-        System.out.println("Arreglo original:");
-        for (int num : arr)
-            System.out.print(num + " ");
-        System.out.println("\n");
+    // System.out.println("Arreglo original:");
+    // for (int num : arr)
+    // System.out.print(num + " ");
+    // System.out.println("\n");
 
-        mergeSort(arr, 0, arr.length - 1);
+    // mergeSort(arr, 0, arr.length - 1);
 
-        System.out.println("Arreglo final ordenado:");
-        for (int num : arr)
-            System.out.print(num + " ");
-    }
+    // System.out.println("Arreglo final ordenado:");
+    // for (int num : arr)
+    // System.out.print(num + " ");
+    // }
 }

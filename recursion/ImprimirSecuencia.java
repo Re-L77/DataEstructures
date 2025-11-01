@@ -48,6 +48,6 @@ public class ImprimirSecuencia {
     public static void main(String[] args) {
         // impSec2(1, 3);
         // System.out.println(factorialN(5));
-        System.out.println(fibo(50));
+        System.out.println(fibo(5));
     }
 }

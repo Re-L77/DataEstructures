@@ -12,12 +12,14 @@ public class test {
         lista.insertar(n3);
         lista.insertar(n2);
         lista.insertar(n1);
+        lista.clonar(2);
+        // lista.clonar();
         lista.imprimir();
-        lista.insertar(n4);
-        lista.imprimir();
-        lista.insertarFinal(n5);
-        lista.imprimir();
-        lista.insertarFinal(n6);
-        lista.imprimir();
+        // lista.insertar(n4);
+        // lista.imprimir();
+        // lista.insertarFinal(n5);
+        // lista.imprimir();
+        // lista.insertarFinal(n6);
+        // lista.imprimir();
     }
 }
