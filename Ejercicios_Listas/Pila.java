@@ -30,10 +30,10 @@ public class Pila {
         tamanio++;
     }
 
-    public int peek() {
+    public String peek() {
         if (tamanio == 0) {
             System.err.println("No hay elementos.");
-            return -1;
+            return null;
         }
         return ultimo.dato;
     }
@@ -58,57 +58,10 @@ public class Pila {
         return tamanio == 0 ? true : false;
     }
 
-    // public void clonar2() {
-    // if (tamanio == 0)
-    // System.out.println("No");
-    // else {
-    // Nodo temp = primero;
-    // Nodo nuevo;
-    // while (temp != null) {
-    // nuevo = new Nodo(temp.dato);
-    // nuevo.sig = temp.sig;
-    // temp.sig = nuevo;
-    // temp = nuevo.sig;
-    // }
-    // }
-    // }
-
-    // public void clonar(int veces) {
-    // if (tamanio == 0) {
-    // System.out.println("Lista vacía");
-    // return;
-    // }
-
-    // Nodo actual = primero;
-
-    // while (actual != null) {
-    // int clones = 0;
-    // // Guarda el siguiente nodo original antes de modificar los punteros
-    // Nodo siguiente = actual.sig;
-
-    // // Clona el nodo 'veces' veces
-    // while (clones < veces) {
-    // Nodo clon = new Nodo(actual.dato);
-    // // Inserta el clon justo después del nodo actual
-    // clon.sig = actual.sig;
-    // actual.sig = clon;
-
-    // // Avanza actual al clon recién insertado (para encadenar los siguientes)
-    // actual = clon;
-
-    // tamanio++;
-    // clones++;
-    // }
-
-    // // Al terminar los clones, pasa al siguiente nodo original
-    // actual = siguiente;
-    // }
-    // }
-
     public String imprimir() {
         String cad = "";
         if (tamanio == 0) {
-            System.out.println("Lista vacía");
+            System.out.println("Pila vacía");
             return cad;
         } else {
             Nodo temp = primero;
@@ -119,4 +72,24 @@ public class Pila {
         }
         return cad;
     }
+
+    // public boolean esBalanceado(String s) {
+    // if (s == null)
+    // return true;
+
+    // for (int i = 0; i < s.length(); i++) {
+    // char c = s.charAt(i);
+    // if (c == '(') {
+    // this.push(new Nodo(String.valueOf(c)));
+    // } else if (c == ')') {
+    // if (this.isEmpty()) {
+    // return false;
+    // }
+    // this.pop();
+    // }
+    // }
+
+    // return this.isEmpty();
+    // }
+
 }

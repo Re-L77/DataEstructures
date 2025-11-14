@@ -1,10 +1,10 @@
 package Ejercicios_Listas;
 
 public class Nodo {
-    int dato;
+    String dato;
     Nodo sig;
 
-    public Nodo(int dato) {
+    public Nodo(String dato) {
         this.dato = dato;
         this.sig = null;
     }
