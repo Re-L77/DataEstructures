@@ -30,6 +30,21 @@ public class Lista {
         tamanio++;
     }
 
+    public void clonar2() {
+        if (tamanio == 0)
+            System.out.println("No");
+        else {
+            Nodo temp = primero;
+            Nodo nuevo;
+            while (temp != null) {
+                nuevo = new Nodo(temp.dato);
+                nuevo.sig = temp.sig;
+                temp.sig = nuevo;
+                temp = nuevo.sig;
+            }
+        }
+    }
+
     public void clonar(int veces) {
         if (tamanio == 0) {
             System.out.println("Lista vacía");

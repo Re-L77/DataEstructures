@@ -52,7 +52,7 @@ public class PruebaOrdenacion {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        int[] datos = inicializarArregloAleatorio(500000);
+        int[] datos = inicializarArregloAleatorio(3_000_000);
 
         System.out.println("Arreglo original:");
         // Ordenacion.imprimirArreglo(datos); // no lo imprimos porque tomaría tiempo ,
@@ -63,12 +63,12 @@ public class PruebaOrdenacion {
 
         // 2. Llamar a la función cuyo tiempo de ejecución queremos medir
         System.out.println("Ordenando ... ... ...");
-        Ordenacion.quickSort(datos); // ESTO es lo único que irá cambiando en este archivo
+        Ordenacion.heapSort(datos); // ESTO es lo único que irá cambiando en este archivo
 
         // 3. Registrar el tiempo de finalización
         long tiempoFinNano = System.nanoTime();
 
-        System.out.println("\nArreglo ordenado (Quick Sort):");
+        System.out.println("\nArreglo ordenado (Heap):");
         // // no lo imprimos porque tomaría tiempo , y más si son millones de datos ..
         // pero ya está probado que ordena
 
